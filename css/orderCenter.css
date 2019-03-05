@@ -1,0 +1,84 @@
+
+#orderList {
+	/*display: 						none;*/
+	margin: 						0 0.6em;
+}
+#orderList ul {
+	padding: 						0.2em 0;
+	margin: 						0.6em 0;
+	box-shadow: 					1px 1px 2px 0.5px #dae1e7;
+}
+#orderList ul li {
+	font-size: 						0.7em;
+}
+
+#orderList .orderListTop {
+	display: 						flex;
+	flex-direction: 				row;
+	align-items: 					center;
+	border-bottom: 					1px solid #b6627c;
+	padding: 						0.4em 0.8em;
+	font-size: 						0.8em;
+}
+.orderListNumber {
+	width: 							60%;
+	margin:  						0 0.2em;
+}
+.orderListOption {
+	width: 							40%;
+	text-align: 					right;
+}
+.orderListOption span {
+	margin: 						0 0.4em;
+	color: 							#36c;
+}
+
+.orderListBox {
+	display: 						flex;
+	align-items: 					center;
+	text-align: 					left;
+	padding: 						0.8em 0.4em;
+	border-bottom: 					1px solid #ccc;
+}
+.orderListImg {
+	width: 							25%;
+	overflow: 						hidden;
+	margin:							0 0.4em;
+}
+.orderListImg img {
+	width: 							100%;
+}
+.orderListTitle {
+	width: 							65%;
+	margin:							0 0.4em;
+}
+.orderListPrice {
+	width: 							10%;
+	margin:							0 0.6em;
+}
+
+#orderList .orderListBottom {
+	display: 						flex;
+	justify-content: 				space-around;
+	align-items: 					center;
+	padding: 						0.5em 0.4em 0.3em;
+	font-size: 						0.8em;
+}
+.orderListDate {
+	width: 							40%;
+	margin: 						0 0.6em;
+	text-align: 					left;
+}
+.orderListTotalPrice {
+	width: 							40%;
+	text-align: 					right;
+	margin: 						0 0.6em;
+}
+.orderListTotalPrice span {
+	color: 							#ff0036;
+}
+.orderListState {
+	width: 							20%;
+	text-align: 					right;
+	margin: 						0 0.6em;
+}

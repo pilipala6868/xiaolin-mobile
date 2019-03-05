@@ -1,0 +1,251 @@
+
+html, body {
+	height: 					100%;
+}
+body {
+	padding: 					0;
+	margin: 					0;
+	outline: 					0;
+	background-color: 			#fff;
+}
+li {
+	list-style:					none;
+}
+h2 {
+	font-size: 					0.95em;
+	font-family: 				"Microsoft JhengHei", "PingFang SC", "Microsoft YaHei", "宋体", sans-serif;
+	font-weight: 				normal;
+	letter-spacing:				1.5px;
+	border-left:				0.25em solid #b6627c;
+	padding-left:				0.5em;
+	margin: 					0 0.1em;
+}
+hr {
+	border-width: 				0.03em;
+	border-color: 				#ccc;
+	margin: 					0.25em 0;
+}
+a {
+    color:                      #337ab7;
+    text-decoration:            none;
+}
+
+
+[v-cloak] {
+  	display: 					none;
+}
+
+
+#leftBox {
+	font-family: 				"Microsoft JhengHei", "PingFang SC", "Microsoft YaHei", "宋体", sans-serif;
+	background-color: 			#fff;
+}
+#navigation {
+	padding: 					0; 
+	margin: 					0;
+	letter-spacing: 			0.1em;
+}
+#navigation > li {
+	padding: 					0.25em 0.15em;
+	margin: 					0 0.3em;
+	border-top: 				0.01em solid #d3d1d1;
+}
+#navigation > li:nth-child(1) {
+	border-top: 				none;
+}
+#navigation > li > a {
+	display: 					flex;
+	align-items: 				center;
+	border-left: 				0.2em solid transparent;
+	padding: 					0.5em 0.7em;
+	font-size: 					0.9em;
+	color: 						#666;
+}
+#navigation > li > a > .faImg {
+	width: 						1.2em;
+	margin-right: 				0.6em;
+}
+#navigation > li > a > span {
+	width: 						90%;
+	text-align: 				left;
+	text-decoration: 			none;
+}
+#navigation > li > a > .fa {
+	font-size: 					1.2em;
+	margin-top: 				0.2em;
+	color: 						#b5b5b5;
+	text-align: 				center;
+}
+#navigation > li.chosen_navig {
+	background-color: 			#ffc;
+}
+#navigation > li.chosen_navig > a {
+	border-left: 				0.2em double #b6627c;
+	color: 						#333;
+	font-weight: 				bold;
+}
+
+#navigation ul.ul_inside li {
+	margin: 					0 0.6em;
+	padding: 					0.2em 0.2em;
+	border-bottom: 				1px solid #d3d1d1;
+}
+#navigation ul.ul_inside li:last-child {
+	border-bottom: 				none;
+}
+#navigation ul.ul_inside li a {
+	font-size: 					0.8em;
+	color: 						#666;
+	text-decoration: 			none;
+}
+
+
+#header {
+	position: 					fixed;
+	width: 						100%;
+	height: 					50px;
+	top: 						0;
+	display: 					flex;
+	justify-content: 			space-between;
+	align-items: 				center;
+	background-color: 			#e9e9e9;
+	margin: 					0;
+	z-index: 					100;
+}
+#header_leftBox, #header_search {
+	width: 						5%;
+	font-size: 					1em;
+	text-align: 				center;
+	margin: 					0 10px;
+}
+#header_leftBox a {
+	color: 						#000;
+}
+#header_icon {
+	text-align: 				center;
+	width: 						50%;
+}
+#header_icon img {
+	width: 						85%;
+	max-width: 					184px;
+	max-height: 				50px;
+}
+
+#header_searchBox {
+	display: 					none;
+	position: 					fixed;
+	width: 						100%;
+	top: 						50px;
+	justify-content: 			space-between;
+	align-items: 				center;
+	padding: 					0.5em 0;
+	border-bottom: 				1px solid #ddd;
+	background-color: 			#fff;
+	z-index: 					100;
+}
+#header_searchBox div:nth-child(1) {
+	width: 						95%;
+	text-align: 				center;
+}
+#header_searchBox div:nth-child(2) {
+	width: 						5%;
+	font-size: 					1em;
+	margin: 					0 10px;
+	text-align: 				center;
+}
+#header_searchBox input {
+	width: 						90%;
+	border:						1px solid transparent;
+	outline: 					none;
+	padding: 					0.1em 0.3em;
+	font-size: 					0.8em;
+	letter-spacing: 			0.5px;
+}
+
+
+#mainBox {
+	padding: 					0;
+	margin-top:					50px;
+	z-index: 					10;
+}
+#mainBox hr {
+	margin: 					0.4em;
+}
+
+
+#pageName {
+	padding: 					0.6em 0.4em 0;
+}
+#pageName h2 {
+	margin-left: 				0.2em;
+}
+
+
+.row {
+	display: 					flex;
+	flex-wrap: 					nowrap;
+	justify-content: 			center;
+	margin: 					0 -0.1em;
+}
+.row a {
+	text-decoration: 			none;
+}
+.babyBox {
+	width: 						48%;
+	margin: 					0.2em;
+	padding: 					0.1em;
+	border: 					1px solid transparent;
+	background-color: 			#fff;
+	box-shadow: 				0px 0px 2px 1px #dae1e7;
+}
+.babyBox .babyImg {
+	width: 						100%;
+	display: 					flex;
+	align-items: 				center;
+	overflow: 					hidden;
+}
+.babyBox .babyImg img {
+	width: 						100%;
+}
+.babyBox .babySpan {
+	font-size: 					0.75em;
+	font-family: 				'微软雅黑', sans-serif;
+	word-break: 				break-all;
+	margin: 					0.2em 0.3em;
+	color: 						#000;
+	line-height: 				1.35em;
+}
+
+.babyBox .babyBottem {
+	font-size: 						0.7em;
+	margin: 						0.2em 0.5em;
+	letter-spacing: 				0.05em;
+}
+.babyBox .babyBottem div {
+	display: 						inline;
+	margin-right: 					1em;
+}
+.babyBox .babyBottem .symbol {
+	font-family: 					arial;
+    margin-right: 					0.2em;
+    color: 							#999;
+}
+.babyBox .babyBottem .price {
+    color: 							#b6627c;
+    font-weight: 					bold;
+    font-family: 					verdana, arial;
+}
+.babyBox .babyBottem .sellSum {
+	font-size: 						0.6em;
+    color: 							#666;
+}
+
+
+#footer {
+	text-align: 				center;
+	margin: 					2em 0.5em 1em;
+	font-size: 					0.1em;
+}
+#footer hr {
+	margin: 					0.4em 0 1em;
+}

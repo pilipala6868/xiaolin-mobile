@@ -1,0 +1,32 @@
+
+#about {
+	margin: 						0.4em 0.8em;
+	padding: 						0.2em 0.4em;
+	background-image: 				url(../image/bg/1.png);
+	font-family: 					"Microsoft JhengHei", "PingFang SC", "Microsoft YaHei", "宋体", sans-serif;
+}
+
+#shopImg {
+	width: 							40%;
+	float: 							right;
+	margin: 						0.8em 0.6em;
+}
+img {
+	width: 							100%;
+}
+
+.introParagraph {
+	border-left: 					3px double #b6627c;
+	padding-left: 					0.5em;
+	margin: 						0.8em 0;
+	font-size: 						0.8em;
+	text-align: 					justify;
+	letter-spacing: 				0.05em;
+}
+.introParagraph div {
+	margin: 						0.5em 0;
+}
+
+#footer {
+	margin-top: 					1em;
+}

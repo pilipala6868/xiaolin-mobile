@@ -1,0 +1,91 @@
+
+#loginBox, #registerBox {
+    margin:                         0.7em 0.8em;
+    padding:                        0 0.2em;
+}
+#registerBox {
+	display: 						none;
+}
+
+.table_head img {
+    width:                          100%;
+}
+
+#loginForm {
+    margin:                         1em 0;
+}
+
+.inputRow {
+    display:                        flex;
+    align-items:                    center;
+    margin:                         0.6em 0;
+}
+.inputRow div {
+    width:                          6%;
+    display:                        flex;
+    align-items:                    center;
+    justify-content:                center;
+    background-color:               #eee;
+    border:                         1px solid #ccc;
+    border-right:                   none;
+    border-radius:                  0.2em 0 0 0.2em;
+    padding:                        0 0.5em;
+}
+.inputRow i {
+    color:                          #221d2b;
+    font-size:                      0.8em;
+}
+.inputRow input {
+    width:                          100%;
+    font-size:                  	0.9em;
+    border:                         1px solid #ccc;
+    border-radius:                  0 0.2em 0.2em 0;
+    outline:                        none;
+    padding:                        0.4em;
+    letter-spacing:                 0.05em;
+}
+
+#loginFormButton, #registerFormButton {
+    text-align:                 	center;
+    margin: 						0.8em 0;
+    display: 						flex;
+}
+#loginFormButton div, #registerFormButton div {
+    padding:                    	0.4em;
+    font-size:                  	0.9em;
+    color:                          #333;
+    background-color:               #fff6dd;
+    border:							1px solid #ccc;
+    border-radius:              	0.2em;
+}
+#loginFormButton div {
+    width:                          50%;
+}
+#loginFormButton div:nth-child(1) {
+	margin-right: 					0.5em;
+}
+#registerFormButton div {
+    width:                          100%;
+}
+
+
+.remindWord {
+    font-size:                      0.75em;
+    color:                          #b6627c;
+}
+
+#loginSuccess {
+	display: 						none;
+    width:                      	100%;
+	text-align: 					center;
+	margin: 						2em auto;
+	background-color:				#fff;
+	letter-spacing: 	 			1px;
+}
+#loginSuccess div:nth-child(1) {
+	font-size: 						1em;
+	margin-bottom: 					1em;
+}
+#loginSuccess div:nth-child(2) {
+	font-size: 						0.8em;
+}

@@ -1,0 +1,94 @@
+<!--
+ *
+ * 首页
+ * 
+ *
+ * @date  2019.02.23
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- Slider -->
+        <link style="text/css" rel="stylesheet" href="script/jquerySlider/slider.css" />
+        <script type="text/javascript" src="script/jquerySlider/slider.js"></script>
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/indexpage.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/indexpage.js"></script>
+    </head>
+
+    <body>
+
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox" v-cloak>
+
+            <div class="slider">
+                <div class="slideBox">
+                    <div :class="'slideImg '+slider.class" v-for="slider in sliders">
+                        <img :src="'image/slider/'+slider.imgsrc" :onclick="'window.open(\'babyInfo.html?type=Saxophone&id='+slider.baby_id+'\');'" />
+                    </div>
+                </div>
+                <div class="slideBt"></div>
+            </div>
+
+            <div id="newest">
+                <h2>最近更新</h2>
+                <hr />
+                <div class="row" v-for="row in newestRows">
+                    <div class="babyBox" v-for="baby in row">
+                        <a :href="'babyInfo.html?id='+baby.baby_id+'&type='+baby.instrument" target="_blank">
+                            <div class="babyImg"><img :src="'image/babys/'+baby.pic" /></div>
+                            <div class='babySpan'>{{baby.name}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recommend" class="container">
+                <h2>宝贝推荐</h2>
+                <hr />
+                <div class="row" v-for="row in recommendRows">
+                    <div class="babyBox" v-for="baby in row">
+                        <a :href="'babyInfo.html?id='+baby.baby_id+'&type='+baby.instrument" target="_blank">
+                            <div class="babyImg"><img :src="'image/babys/'+baby.pic" /></div>
+                            <div class='babySpan'>{{baby.name}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

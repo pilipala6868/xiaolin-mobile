@@ -1,0 +1,115 @@
+<!--
+ *
+ * 购物车
+ * 
+ *
+ * @date  2019.03.04
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>购物车 - 小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/shoppingCart.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/shoppingCart.js"></script>
+    </head>
+
+    <body>
+        
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox">
+
+            <div id="pageName">
+                <h2></h2>
+            </div>
+            
+            <hr />
+
+            <div id="shoppingCart">
+                <ul v-cloak>
+                    <li v-for='item in items' class="itemList"><div class="itemBox">
+                        <div class="checkBox"><input type="checkbox" /></div>
+                        <div class="itemImg"><img :src="'image/babys/'+item.pic"></div>
+                        <div class="rightInfo">
+                            <div class="itemTitle"><a :href="'babyInfo.html?id='+item.baby_id+'&type='+item.instrument" target="_blank">{{ item.name }}</a></div>
+                            <div class="rightInfoBottom">
+                                <div class="itemPrice">
+                                    <span>￥{{ item.price }}.00</span>
+                                    <span v-if="item.changetone">+ 2.50</span>
+                                </div>
+                                <div class="itemDelete">
+                                    <span v-if="!item.changetone" class="optionChange" :shopping_id="item.shopping_id">移调</span>
+                                    <span class="optionDelete" :shopping_id="item.shopping_id"><i class="fa fa-trash-o fa-lg"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div></li>
+
+                    <li><div class="itemBoxBottom">
+                        <div class="checkBox"><input type="checkbox" id="allchecked" /></div>
+                        <div>已选 <span>{{ totalNum }}</span> 件</div>
+                        <div>合计：<span>￥</span><span>{{ totalPrice }}</span></div>
+                        <div id="settlement">结 算</div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div id="newOrder" v-cloak>
+                <form name='alipayment' action='php/alipay/wappay/pay.php' method='post' target="_blank">
+                    <input type="hidden" id="WIDout_trade_no" name="WIDout_trade_no" :value="orderNumber" />
+                    <input type="hidden" id="WIDsubject" name="WIDsubject" value="小林制谱" />
+                    <input type="hidden" id="WIDtotal_amount" name="WIDtotal_amount" :value="orderPrice" />
+                </form>
+                <ul>
+                    <li v-for='orderList in orderLists'><div class="orderListBox">
+                        <div class="orderListImg"><img :src="'image/babys/'+orderList.pic"></div>
+                        <div class="orderListTitle">{{ orderList.name }}</div>
+                        <div class="orderListPrice">
+                            <div>￥{{ orderList.price }}.00</div>
+                            <div v-if="orderList.changetone">+2.50</div>
+                        </div>
+                    </div></li>
+                </ul>
+                <div id="orderListBottom">
+                    <div id="orderListNumber">订单号：{{ orderNumber }}</div>
+                    <div id="orderListTotalPrice">合计：<span>￥</span><span>{{ orderPrice }}</span></div>
+                    <div id="returnToCart"><a href="shoppingCart.html"><i class="fa fa-mail-reply"></i>返回</a></div>
+                    <div id="orderListSubmit" onclick="newWindow=window.open(); newOrderClick(newWindow);">提交订单</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

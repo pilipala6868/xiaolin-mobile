@@ -1,0 +1,124 @@
+<!--
+ *
+ * 宝贝详情页
+ * 
+ *
+ * @date  2019.03.04
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/babyInfo.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/babyInfo.js"></script>
+    </head>
+
+    <body> 
+
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox" v-cloak>
+
+            <div id="showBox">
+                <h2>曲谱介绍</h2>
+                <hr />
+                <div id="imgBox">
+                    <img :src="'image/babys/'+babyInfo.pic" />
+                </div>
+                <div id="infoBox">
+                    <div id="infoName">{{ babyInfo.name }}</div>
+                    <div id="infoPrice">
+                        <span>价格</span>
+                        <span>¥</span>
+                        <span>{{ babyInfo.price }}.00</span>
+                    </div>
+                    <div id="infoPages">
+                        <div>
+                            <span>页数</span>
+                            <span>{{ babyInfo.pages }}</span>
+                        </div>
+                        <div>|</div>
+                        <div>
+                            <span>销量</span>
+                            <span>{{ babyInfo.sellSum }}</span>
+                        </div>
+                    </div>
+                    <hr />
+                    <div id="infoBt">
+                        <a id="infoShop" onclick="addToCart();"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                        <a id="infoChangetone" onclick="addToCart(1);">+2.5移调</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="details">
+                <h2>曲谱详情</h2>
+                <hr />
+                <div id="detailsText">
+                    <div v-html='babyInfo.intro'>
+                        {{ babyInfo.intro }}
+                    </div>
+                    <div>
+                        <p>若需{{ babyInfo.others }}等其他乐器的五线谱，+2.5可移调改调</p>
+                    </div>
+                    <div>
+                        <p>所有曲谱都是<span class="underline">电子版</span>的，不会有任何纸质的曲谱发送</p>
+                    </div>
+                    <div>
+                        <p>拍下付款后，小林将在第一时间发送文件到您的邮箱</p>
+                        <p>或可直接发送文件到QQ，请通过QQ告知小林</p>
+                    </div>
+                    <div>
+                        <p>任何疑问欢迎添加QQ：<span class="underline">197988241</span>，随时咨询小林</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recommend" class="container">
+                <h2>宝贝推荐</h2>
+                <hr />
+                <div class="row" v-for="row in recommends">
+                    <div class="babyBox" v-for="baby in row">
+                        <a :href="'babyInfo.html?id='+baby.baby_id+'&type='+baby.instrument" target="_blank">
+                            <div class="babyImg"><img :src="'image/babys/'+baby.pic" /></div>
+                            <div class='babySpan'>{{baby.name}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

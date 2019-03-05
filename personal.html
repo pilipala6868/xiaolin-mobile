@@ -1,0 +1,127 @@
+<!--
+ *
+ * 个人中心、个人信息修改、注销
+ * 
+ *
+ * @date  2019.03.04
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>个人中心 - 小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/personal.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/personal.js"></script>
+    </head>
+
+    <body> 
+        
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox">
+
+            <div id="pageName">
+                <h2></h2>
+                <div id="hiToUser"></div>
+            </div>
+            
+            <hr />
+
+            <div id="allFuncBox">
+                <div class="funcRow">
+                    <div class="funcBox" onclick="personalInfo();">
+                        <div><i class="fa fa-address-book-o"></i></div>
+                        <div>个人信息</div>
+                    </div>
+                    <div class="funcBox" onclick="window.location.href = 'shoppingCart.html';">
+                        <div><i class="fa fa-shopping-cart"></i></div>
+                        <div>购物车</div>
+                    </div>
+                </div>
+                <div class="funcRow">
+                    <div class="funcBox" onclick="window.location.href = 'orderCenter.html';">
+                        <div><i class="fa fa-file-text-o"></i></div>
+                        <div>订单中心</div>
+                    </div>
+                    <div class="funcBox" onclick="logout();">
+                        <div><i class="fa fa-power-off"></i></div>
+                        <div>注销</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="personalInfo" v-cloak>
+                <form id="personalInfoForm" enctype="multipart/form-data" method="post">
+                    <div id="personalInfo_table">
+                         <div class="inputRow">
+                            <div><i class="fa fa-street-view"></i></div>
+                            <input type="text" class="personalInfoInput" placeholder="淘宝ID / QQ昵称" :value="personalInfo.name" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-user-circle-o"></i></div>
+                            <input type="text" class="personalInfoInput" placeholder="账号" :value="personalInfo.username" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-key"></i></div>
+                            <input type="password" class="personalInfoInput" placeholder="旧密码（不修改密码无需填写）" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-lock"></i></div>
+                            <input type="password" class="personalInfoInput" placeholder="新密码（不修改密码无需填写）" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-lock"></i></div>
+                            <input type="password" class="personalInfoInput" placeholder="确认新密码（不修改密码无需填写）" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-envelope-o"></i></div>
+                            <input type="text" class="personalInfoInput" placeholder="邮箱（以发送曲谱文件）" :value="personalInfo.email" />
+                        </div>
+                    </div>
+
+                    <div id="personalInfoButton">
+                        <div onclick="javascript:personalInfoUpdate(); return false;">确认修改</div>
+                        <div onclick="javascript:returnClick(); return false;">返 回</div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="logoutSuccess">
+                <div>注销成功！</div>
+                <div>正在为您跳转到<a href="index.html">首页</a>... <span>5</span>s</div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

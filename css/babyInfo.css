@@ -1,0 +1,135 @@
+
+#showBox hr, #details hr, #recommend hr {
+	margin: 				0.4em 0;
+}
+
+#showBox {
+	margin: 				0.7em 0.8em;
+	padding-top: 			0.6em;
+}
+
+#imgBox {
+	padding: 				0 0.4em;
+}
+#imgBox img {
+	width: 					100%;
+}
+
+#infoBox {
+	padding: 				0.4em 0.8em;
+	letter-spacing: 		0.05em;
+}
+
+#infoName {
+	font-size: 				0.9em;
+	letter-spacing: 		0.02em;
+	margin: 				0.3em 0;
+	padding: 				0.2em 0.2em;
+}
+
+#infoPrice {
+	display: 				flex;
+	align-items: 			center;
+	background-color: 		#fff6dd;
+	margin: 				0.4em 0;
+	padding: 				0.6em 0.8em;
+}
+#infoPrice span:nth-child(1) {
+	font-size: 				0.7em;
+	margin-right: 			1.2em;
+}
+#infoPrice span:nth-child(2) {
+	font-size: 				1.2em;
+	font-family: 			arial;
+	color: 					#ff4200;
+	margin-right: 			0.3em;
+}
+#infoPrice span:nth-child(3) {
+	font-size: 				1.2em;
+	font-family: 			verdana,arial;
+	font-weight: 			bold;
+	color: 					#ff4200;
+}
+
+#infoPages {
+	padding: 				0 0.8em;
+}
+#infoPages div {
+	display: 				inline;
+}
+#infoPages div:nth-child(2) {
+	margin: 				0 0.5em;
+	color: 					#eadada;
+}
+#infoPages span {
+	font-size: 				0.7em;
+}
+#infoPages span:nth-child(1) {
+	margin-right: 			0.4em;
+}
+#infoPages span:nth-child(2) {
+	font-family: 			verdana,arial;
+}
+
+#infoBox hr {
+	margin:  				0.4em 0;
+}
+
+#infoBt {
+	margin: 				0.8em 0;
+	display: 				flex;
+	text-align: 			center;
+}
+#infoBt a {
+	width: 					50%;
+	padding: 				0.6em 0.8em;
+	font-size: 				0.85em;
+	border-radius: 			0.15em;
+}
+#infoShop {
+	background-color: 		#ff4200;
+	color: 					#fff;
+	margin-right: 			0.5em;
+}
+#infoShop i {
+	margin-right: 			0.4em;
+}
+#infoChangetone {
+	background-color: 		#fff6dd;
+	border:					0.05em solid #feb782;
+	color: 					#ff4200;
+}
+
+
+#details {
+	padding: 				0.4em 0.8em;
+	margin: 				0.5em auto;
+	letter-spacing: 		0.05em;
+}
+#detailsText {
+	background-image: 		url(../image/bg/1.png);
+	padding: 				0.2em 0.4em;
+}
+#detailsText div {
+	border-left: 			0.3em double #b6627c;
+	padding: 				0 0.5em 0 0.8em;
+	margin: 				1.2em 0;
+	font-size: 				0.85em;
+	word-break: 			break-all;
+}
+#detailsText div p {
+	margin: 				0.6em 0;
+}
+#detailsText div p a {
+	color: 					#337ab7;
+	text-decoration: 		underline;
+}
+#detailsText .underline {
+	text-decoration: 		underline;
+}
+
+
+#recommend {
+	padding: 				0 0.8em;
+	margin: 				0.5em auto;
+}

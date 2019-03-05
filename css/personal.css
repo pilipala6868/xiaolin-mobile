@@ -1,0 +1,119 @@
+
+#pageName {
+    display:                        flex;
+    align-items:                    flex-end;
+    justify-content:                space-between;
+}
+#hiToUser {
+    font-size:                      0.8em;
+    font-family:                    "Microsoft JhengHei", "PingFang SC", "Microsoft YaHei", "宋体", sans-serif;
+    letter-spacing:                 0.05em;
+    margin:                         0 1.3em;
+}
+
+.funcRow {
+    display:                        flex;
+    justify-content:                center;
+    align-items:                    center;
+    text-align:                     center;
+    padding:                        0 0.8em;
+}
+.funcBox {
+    width:                          50%;
+    padding:                        2em 0.5em;
+    margin:                         0.6em;
+    background-color:               #fff;
+    cursor:                         pointer;
+    box-shadow:                     1px 2px 2px 0.5px #dae1e7;
+    transition:                     border 0.2s, box-shadow 0.2s;
+}
+#allFuncBox .funcBox:hover {
+    border:                         1px solid #b6627c;
+    box-shadow:                     1px 2px 5px 3px #dae1e7;
+}
+.funcBox div:nth-child(1) {
+    color:                          #b6627c;
+    margin-bottom:                  8px;
+    font-size:                      18px;
+}
+.funcBox div:nth-child(2) {
+    color:                          #000;
+    font-size:                      15px;
+}
+
+
+#personalInfo {
+    display:                        none;
+    opacity:                        0;
+    margin:                         0.6em 0.8em;
+}
+
+.inputRow {
+    display:                        flex;
+    align-items:                    center;
+    margin:                         0.6em 0;
+}
+.inputRow div {
+    width:                          6%;
+    display:                        flex;
+    align-items:                    center;
+    justify-content:                center;
+    background-color:               #eee;
+    border:                         1px solid #ccc;
+    border-right:                   none;
+    border-radius:                  0.2em 0 0 0.2em;
+    padding:                        0 0.5em;
+}
+.inputRow i {
+    color:                          #221d2b;
+    font-size:                      0.8em;
+}
+.inputRow input {
+    width:                          100%;
+    font-size:                      0.9em;
+    border:                         1px solid #ccc;
+    border-radius:                  0 0.2em 0.2em 0;
+    outline:                        none;
+    padding:                        0.4em;
+    letter-spacing:                 0.05em;
+}
+
+#personalInfoButton {
+    text-align:                     center;
+    margin:                         0.8em 0;
+    display:                        flex;
+}
+#personalInfoButton div {
+    width:                          50%;
+    padding:                        0.4em;
+    font-size:                      0.9em;
+    color:                          #333;
+    background-color:               #fff6dd;
+    border:                         1px solid #ccc;
+    border-radius:                  0.2em;
+}
+#personalInfoButton div:nth-child(1) {
+    margin-right:                   0.5em;
+}
+
+
+.remindWord {
+    font-size:                      0.75em;
+    color:                          #b6627c;
+}
+
+#logoutSuccess {
+    display:                        none;
+    width:                          100%;
+    text-align:                     center;
+    margin:                         2em auto;
+    background-color:               #fff;
+    letter-spacing:                 1px;
+}
+#logoutSuccess div:nth-child(1) {
+    font-size:                      1em;
+    margin-bottom:                  1em;
+}
+#logoutSuccess div:nth-child(2) {
+    font-size:                      0.8em;
+}

@@ -1,0 +1,108 @@
+<!--
+ *
+ * 宝贝列表
+ * 
+ *
+ * @date  2019.03.03
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/babylist.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/babylist.js"></script>
+    </head>
+
+    <body> 
+        
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox" v-cloak>
+
+            <div id="pageName">
+                <h2></h2>
+            </div>
+            
+            <hr />
+
+            <div id="sortline">
+                <div id="sellSumSort">
+                    <a class="sortChoice" :href="'babylist.html?type='+type+'&page=1&sortWay=sellSum'">
+                        人气 <i class="fa fa-arrow-down"></i>
+                    </a>
+                </div>
+                <div id="postSort">
+                    <a class="sortChoice" :href="'babylist.html?type='+type+'&page=1&sortWay=post'">
+                        新品 <i class="fa fa-arrow-down"></i>
+                    </a>
+                </div>
+                <div id="priceSort">
+                    <a class="sortChoice" :href="'babylist.html?type='+type+'&page=1&sortWay=price'">
+                        价格 <i class="fa fa-arrow-down"></i>
+                    </a>
+                </div>
+                <div id="priceUpSort">
+                    <a class="sortChoice" :href="'babylist.html?type='+type+'&page=1&sortWay=priceUp'">
+                        价格 <i class="fa fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <hr />
+
+            <div id="babyAll">
+                <div class="row" v-for="row in babyAllRows">
+                    <div class="babyBox" v-for="baby in row">
+                        <a :href="'babyInfo.html?id='+baby.baby_id+'&type='+baby.instrument" target="_blank">
+                            <div class="babyImg"><img :src="'image/babys/'+baby.pic" /></div>
+                            <div class='babySpan'>{{baby.name}}</div>
+                            <div class='babyBottem'>
+                                <div><span class="symbol">¥</span><span class="price">{{baby.price}}.00</span></div>
+                                <div class="sellSum">销量：{{baby.sellSum}}件</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pageNumber">
+                <a class="lastpage clickable">上一页</a>
+                <a class="number clickable" v-for="num in numbers" :href="'babylist.html?type='+type+'&page='+num+'&sortWay='+pageSort">{{ num }}</a>
+                <a class="nextpage clickable">下一页</a>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

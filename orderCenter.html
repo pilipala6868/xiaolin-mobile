@@ -1,0 +1,96 @@
+<!--
+ *
+ * 订单中心
+ * 
+ *
+ * @date  2019.03.05
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>订单中心 - 小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/orderCenter.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/orderCenter.js"></script>
+    </head>
+
+    <body>
+        
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox">
+
+            <div id="pageName">
+                <h2></h2>
+            </div>
+            
+            <hr />
+
+            <div id="orderList">
+                <ul v-for='orderList in orderLists' v-cloak>
+
+                    <form v-if="orderList.state == '等待付款'" name='alipayment' action='php/alipay/wappay/pay.php' method='post' target="_blank">
+                        <input type="hidden" id="WIDout_trade_no" name="WIDout_trade_no" :value="orderList.order_number" />
+                        <input type="hidden" id="WIDsubject" name="WIDsubject" value="小林制谱" />
+                        <input type="hidden" id="WIDtotal_amount" name="WIDtotal_amount" :value="orderList.price" />
+                    </form>
+
+                    <li class="orderListTop">
+                        <div class="orderListNumber">订单号：{{ orderList.order_number }}</div>
+                        <div v-if="orderList.state == '等待付款'" class="orderListOption">
+                            <span class="orderListCancel" :order_id="orderList.order_id">取消订单</span>
+                            <span class="orderListPay">付款</span>
+                        </div>
+                    </li>
+
+                    <li v-for='baby in orderList.babys' class="orderListBox">
+                        <div class="orderListImg"><img :src="'image/babys/'+baby.pic"></div>
+                        <div class="orderListTitle">{{ baby.name }}</div>
+                        <div class="orderListPrice">
+                            <div>￥{{ baby.price }}.00</div>
+                            <div v-if="baby.changetone">+2.50</div>
+                        </div>
+                    </li>
+
+                    <li class="orderListBottom">
+                        <div class="orderListDate">{{ orderList.post }}</div>
+                        <div class="orderListTotalPrice">合计：<span>￥</span><span>{{ orderList.price }}</span></div>
+                        <div class="orderListState">{{ orderList.state }}</div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

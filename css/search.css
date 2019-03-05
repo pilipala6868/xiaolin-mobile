@@ -1,0 +1,44 @@
+
+#keyWord {
+	margin-bottom: 					0.4em;
+	padding: 						0.2em 2em;
+	font-size: 						0.7em;
+}
+
+
+#babyAll {
+	margin: 						0.2em 0.4em 1em;
+	padding: 						0;
+}
+
+
+#pageNumber {
+	text-align: 					right;
+	margin: 						0.7em 0.4em 0.8em;
+}
+#pageNumber a {
+    font-size: 						0.8em;
+    text-align: 					center;
+    color: 							#000;
+    text-decoration: 				none;
+    padding: 						0.2em 0.45em;
+    margin: 						0 0.2em;
+    cursor: 						default;
+}
+#pageNumber .clickable {
+    background-color: 				#fff;
+    border:							1px solid #ccc;
+    cursor: 						pointer;
+    transition: 					background 0.2s, color 0.2s;
+}
+#pageNumber span {
+    font-size: 						0.5em;
+    margin: 						0 0.3em;
+}
+
+
+#noResult {
+	margin: 						1em auto;
+	font-size: 						0.7em;
+	text-align: 					center;
+}

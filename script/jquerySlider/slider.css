@@ -1,0 +1,53 @@
+
+.slider {
+	width: 				100%;
+	text-align: 		center;
+	margin: 			10px auto;
+	overflow:			hidden;
+}
+
+.slideBox {
+	position: 			relative;
+	transition:			left 0.5s;
+	touch-action: 		none;	/*为了滑动时不弹出不能使用preventDefault()的警告*/
+	z-index: 			10;
+}
+.slideImg {
+	position: 			absolute;
+	transition:			left 0.5s;
+}
+.slideImg img {
+	width: 				100%;
+	margin: 			0 0.5em;
+    transition: 		left 0.5s;
+}
+.slideImg1 {
+	/*left: 				-320px;*/	/*在js中按屏幕宽度指定*/
+}
+.slideImg2 {
+	left: 				0px;
+}
+.slideImg3 {
+	/*left: 				320px;*/	/*在js中按屏幕宽度指定*/
+}
+.slideImg4 {
+	opacity: 			0;
+}
+
+.slideBt {
+	position: 			relative;
+	width: 				100%;
+	margin-top: 		-0.5em;
+	z-index: 			10;
+}
+.slideBt span {
+	display: 			inline-block;
+	width: 				0.25em;
+	height: 			0.25em;
+	border-radius: 		1em;
+	margin: 			0 0.2em;
+	background-color:   #c8c8c8;
+}
+.slideBt .lightUp {
+	background-color:   #b6627c;
+}

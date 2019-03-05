@@ -1,0 +1,127 @@
+<!--
+ *
+ * 登录 / 注册页
+ * 
+ *
+ * @date  2019.03.04
+ *
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="icon" href="image/icon/saxophone.png" type="image/x-icon"/>
+        <title>登录 - 小林制谱</title>
+        <!-- JQuery -->
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/jquery.cookie.js"></script>
+        <!-- Vue -->
+        <script type="text/javascript" src="script/vue.min.js"></script>
+        <!-- Font Awesome -->
+        <link style="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <!-- Slider -->
+        <link style="text/css" rel="stylesheet" href="script/jquerySlider/slider.css" />
+        <script type="text/javascript" src="script/jquerySlider/slider.js"></script>
+        <!-- LeftMenu -->
+        <link style="text/css" rel="stylesheet" href="script/leftMenu/leftMenu.css" />
+        <script type="text/javascript" src="script/leftMenu/leftMenu.js"></script>
+
+        <link style="text/css" rel="stylesheet" href="css/same.css" />
+        <link style="text/css" rel="stylesheet" href="css/login.css" />
+        <script type="text/javascript" src="script/same.js"></script>
+        <script type="text/javascript" src="script/login.js"></script>
+    </head>
+
+    <body> 
+        <div id="leftBox">
+            <!-- load 'leftBox.html' -->
+        </div>
+
+        <div id="headlineBox">
+            <!-- load 'headline.html' -->
+        </div>
+
+        <div id="mainBox">
+
+            <div id="pageName">
+                <h2></h2>
+            </div>
+            
+            <hr />
+
+            <div id="loginBox">
+
+                <div class="table_head"><img src="image/img/login.jpg" /></div>
+
+                <form id="loginForm" enctype="multipart/form-data" method="post">
+                    
+                    <div id="login_table">
+                        <div class="inputRow">
+                            <div><i class="fa fa-user-circle-o"></i></div>
+                            <input type="text" class="loginInput" placeholder="账号" />
+                        </div>
+                        <div class="inputRow">
+                            <div><i class="fa fa-key"></i></div>
+                            <input type="password" class="loginInput" placeholder="密码" />
+                        </div>
+                    </div>
+
+                    <div id="loginFormButton">
+                        <div onclick="javascript:loginClick(); return false;">登 录</div>
+                        <div onclick="javascript:switchClick(); return false;">注 册</div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div id="registerBox">
+
+                <form id="registerForm" enctype="multipart/form-data" method="post">
+
+                    <div id="register_table">
+                         <div class="inputRow">
+                            <div><i class="fa fa-street-view"></i></div>
+                            <input type="text" class="registerInput" placeholder="淘宝ID / QQ昵称" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-user-circle-o"></i></div>
+                            <input type="text" class="registerInput" placeholder="账号" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-key"></i></div>
+                            <input type="password" class="registerInput" placeholder="密码" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-lock"></i></div>
+                            <input type="password" class="registerInput" placeholder="确认密码" />
+                        </div>
+                         <div class="inputRow">
+                            <div><i class="fa fa-envelope-o"></i></div>
+                            <input type="text" class="registerInput" placeholder="邮箱（以发送曲谱文件）" />
+                        </div>
+                    </div>
+
+                    <div id="registerFormButton">
+                        <div onclick="javascript:registerClick(); return false;">注 册</div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="loginSuccess">
+                <div>登录成功！</div>
+                <div>正在为您跳转到<a href="personal.html">个人中心</a>... <span>5</span>s</div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <!-- load 'footer.html' -->
+        </div>
+
+    </body>
+
+</html>

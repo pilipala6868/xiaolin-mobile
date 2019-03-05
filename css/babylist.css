@@ -1,0 +1,60 @@
+
+#sortline {
+	padding: 						0em 0.8em;
+	font-size: 						0.7em;
+	display: 						flex;
+	justify-content: 				space-around;
+	align-items: 					center;
+}
+#sortline div {
+	width: 							25%;
+	text-align: 					center;
+	border-left: 					0.1em solid #ccc;
+	border-right: 					0.1em solid #ccc;
+	margin: 						0 0.05em;
+}
+#sortline div:first-child {
+	border-left: 					none;
+}
+#sortline div:last-child {
+	border-right: 					none;
+}
+#sortline div a {
+	color: 							#000;
+	text-decoration: 				none;
+}
+#sortline div i {
+	color: 							#ccc;
+	font-size: 						0.7em;
+}
+
+
+#babyAll {
+	margin: 						0.2em 0.4em 1em;
+	padding: 						0;
+}
+
+
+#pageNumber {
+	text-align: 					right;
+	margin: 						0.7em 0.4em 0.8em;
+}
+#pageNumber a {
+    font-size: 						0.8em;
+    text-align: 					center;
+    color: 							#000;
+    text-decoration: 				none;
+    padding: 						0.2em 0.45em;
+    margin: 						0 0.2em;
+    cursor: 						default;
+}
+#pageNumber .clickable {
+    background-color: 				#fff;
+    border:							1px solid #ccc;
+    cursor: 						pointer;
+    transition: 					background 0.2s, color 0.2s;
+}
+#pageNumber span {
+    font-size: 						0.5em;
+    margin: 						0 0.3em;
+}
