@@ -222,7 +222,7 @@ function settlementClick()
 }
 
 //绑定提交订单触发
-function newOrderClick()
+function newOrderClick(newWindow)
 {
 	//数据库创建订单
 	$.ajax({

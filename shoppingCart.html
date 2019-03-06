@@ -100,7 +100,7 @@
                     <div id="orderListNumber">订单号：{{ orderNumber }}</div>
                     <div id="orderListTotalPrice">合计：<span>￥</span><span>{{ orderPrice }}</span></div>
                     <div id="returnToCart"><a href="shoppingCart.html"><i class="fa fa-mail-reply"></i>返回</a></div>
-                    <div id="orderListSubmit" onclick="newWindow=window.open(); newOrderClick(newWindow);">提交订单</div>
+                    <div id="orderListSubmit" onclick="newOrderClick(window.open());">提交订单</div>
                 </div>
             </div>
 
